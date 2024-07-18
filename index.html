@@ -27,7 +27,9 @@
     <main>
         <section id="home">
             <h1>Welcome to Aero Blow Training</h1>
-            <p>Welcome to Aero Blow, your premier source for the best hair dryers in the industry. Explore our product line, join our training sessions, and take advantage of our exclusive offers.</p>
+            <p>Welcome to Aero Blow, your premier source for the best hair dryers in the industry. Step into a world of fabulous hair transformations with Aero Blow, your go-to destination for 
+           cutting-edge hair dryers. We are thrilled to welcome you to our virtual salon where style, technology, 
+           and beauty converge.</p>
         </section>
 
         <section id="products">
@@ -52,14 +54,47 @@
                 </table>
                 <div class="cart-total">
                     <p>Total: $<span id="total-price">0.00</span></p>
+					 <button id="checkout-btn">Checkout</button>
                 </div>
             </div>
         </section>
-
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <p>If you have any questions or need further assistance, please feel free to contact us at contact@aeroblow.com or call us at 123-456-7890.</p>
-        </section>
+<section id="contact">
+       <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <ol>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </li>
+                    <li>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </li>
+                    <li>
+                        <label>Preferred Contact Method:</label><br>
+                        Email <input type="radio" id="contact-container" name="contact-method" value="email" checked>
+                      Phone <input type="radio" id="contact-container" name="contact-method" value="phone">
+                    </li>
+                    <li>
+                        <button type="submit">Submit Request</button>
+                        <button type="reset">Reset Form</button>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+    </div>
+</section>
     </main>
 	<footer>
         &copy; Copyright 2099. All Rights Reserved.<br>
@@ -67,5 +102,23 @@
         Annsona Ansilon Dores&nbsp;&nbsp;C0932173
     </footer>
     <script src="js/script.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            const resetButton = document.querySelector('button[type="reset"]');
+
+            // Handle form submission
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent the default form submission
+                alert('Form submitted successfully');
+                form.reset(); // Reset the form fields
+            });
+
+            // Handle form reset
+            resetButton.addEventListener('click', () => {
+                form.reset(); // Clear all fields
+            });
+        });
+    </script>
 </body>
 </html>

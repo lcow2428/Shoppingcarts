@@ -14,6 +14,15 @@ function loadCart() {
     }
 }
 
+// Add this function to handle checkout
+function handleCheckout() {
+    // Display a confirmation message
+    alert('Order placed successfully');
+    // Optionally, you might want to clear the cart after checkout
+    cart = [];
+    saveCart();
+    updateCartDisplay();
+}
 
 async function fetchProducts() {
     try {
@@ -101,4 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     updateCartDisplay();
+	
+	// Get the checkout button and add click event listener
+    const checkoutButton = document.getElementById('checkout-btn');
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', handleCheckout);
+    }
 });

@@ -1,0 +1,201 @@
+/* style.css */
+
+body {
+    background-color: #ccb3ff; /* Set background color */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Set default font */
+}
+
+.container {
+    width: 70%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the page */
+}
+
+header {
+    background-color: #9966ff; /* Set background color */
+    margin: 7px 0; /* Set top and bottom margins */
+    border-radius: 5px; /* Add rounded borders */
+    box-shadow: 0 2px 5px rgba(13, 3, 3, 0.2); /* Add shadow */
+    text-align: center; /* Center text */
+    margin: 10px 0;
+    position: relative; /* Add relative positioning */
+}
+
+#banner-text {
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+#sub-banner {
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.logo-container {
+    position: absolute;
+    z-index: 2; /* Ensure the logo is on top of the banner */
+    float: left; /* Float the logo to the left */
+    padding: 10px; /* Add padding */
+}
+
+.logo-container a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Set link color */
+    display: flex; /* Use flex for better alignment */
+    align-items: center; /* Center items vertically */
+}
+
+img[alt="Aero Blow Banner"] {
+    width: 100%;
+}
+
+.logo-container img {
+    margin-right: 10px; /* Add space between logo and text */
+}
+
+nav {
+    text-align: center; /* Center text */
+    padding: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none; /* Remove underlines from links */
+    color: #ffffff; /* Set link color */
+    padding: 5px 10px; /* Set padding for links */
+    margin: 0 5px; /* Set margins between links */
+    border: none; /* Add borders to links */
+    border-radius: 5px; /* Add rounded borders */
+}
+
+nav a:hover {
+    background-color: #e8b7d7; /* Change background color on hover */
+}
+
+main {
+    display: block; /* Set as block element */
+    margin: 7px 0; /* Set margins */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded borders */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.welcome {
+    font-size: 1.5em;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: rgb(24, 6, 102);
+    text-align: center;
+}
+
+.sub-content {
+    font-size: 1em;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 24px; /* Adjust heading font sizes */
+    color: #661aff; /* Change color of heading */
+	text-align: center;
+}
+
+footer {
+    font-size: 12px; /* Adjust footer font size */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Add top margin */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #9966ff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: calc(25% - 40px); /* Four items per row */
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Set a max height for images */
+    object-fit: contain; /* Ensure images are fully visible */
+}
+
+.add-to-cart-btn {
+    background-color: #9966ff; /* Set background color */
+    color: #ffffff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded borders */
+    padding: 10px 15px; /* Set padding */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 10px; /* Add top margin */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #6b3bc3; /* Change background color on hover */
+}
+
+.delete-item-btn {
+	background-color: #9966ff; /* Set background color */
+    color: #ffffff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded borders */
+    padding: 10px 15px; /* Set padding */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 10px; /* Add top margin */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.delete-item-btn { 
+	background-color: #6b3bc3; /* Change background color on hover */
+}
+
+.cart-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.cart-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-container th, .cart-container td {
+    border: 1px solid #9966ff;
+    padding: 8px;
+    text-align: center;
+}
+
+.cart-container th {
+    background-color: #9966ff;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 10px;
+	
+}
+#total-price {
+	
+	font-weight: bold;
+}
+/*  Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+}

@@ -1,0 +1,129 @@
+/* 
+Student Name: Annsona Ansilon Dores
+Student Id: c0932173
+*/
+
+body {
+    background-color: #ccb3ff; /* Set background color */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Set default font */
+}
+
+.container {
+    width: 70%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the page */
+}
+
+header {
+    background-color: #9966ff; /* Set background color */
+    margin: 7px 0; /* Set top and bottom margins */
+    border-radius: 5px; /* Add rounded borders */
+    box-shadow: 0 2px 5px rgba(13, 3, 3, 0.2); /* Add shadow */
+    text-align: center; /* Center text */
+    margin: 10px 0;
+    position: relative; /* Add relative positioning */
+}
+
+#banner-text{
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+#sub-banner{
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+.logo-container {
+    position: absolute;
+    z-index: 2; /* Ensure the logo is on top of the banner */
+    float: left; /* Float the logo to the left */
+    padding: 10px; /* Add padding */
+   
+}
+
+.logo-container a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Set link color */
+    display: flex; /* Use flex for better alignment */
+    align-items: center; /* Center items vertically */
+}
+
+img[alt="Aero Blow Banner"] {
+    width: 100%;
+}
+
+.logo-container img {
+    margin-right: 10px; /* Add space between logo and text */
+} 
+
+nav {
+    text-align: center; /* Center text */
+    padding: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none; /* Remove underlines from links */
+    color: #ffffff; /* Set link color */
+    padding: 5px 10px; /* Set padding for links */
+    margin: 0 5px; /* Set margins between links */
+    border: none; /* Add borders to links */
+    border-radius: 5px; /* Add rounded borders */
+}
+
+nav a:hover {
+    background-color: #e8b7d7; /* Change background color on hover */
+}
+
+h1{
+    text-align: center;
+    
+
+}
+.table-container {
+    margin: 0 auto; /* Auto margin horizontally centers the element */
+    max-width: 90%; /* Adjust the maximum width as needed */
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #fcf9fb;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #9966ff;
+    color: white;
+}
+
+.row-odd{
+background-color: #9966ff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ccb3ff;
+    color: black;
+}
+
+tbody tr:hover {
+    background-color: #6b3bc3;
+}
+
+.product-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

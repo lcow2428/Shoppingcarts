@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Dyson", "price": 49.99, "img": "img/hd1.webp" },
+    { "id": 2, "name": "Philips", "price": 79.49, "img": "img/hd2.webp" },
+    { "id": 3, "name": "Reymonds", "price": 120.29, "img": "img/hd3.webp" },
+    { "id": 4, "name": "Boltzmanns", "price": 89.99, "img": "img/hd4.jpg" },
+    { "id": 5, "name": "Graceland", "price": 275.50, "img": "img/hd5.jpg" },
+    { "id": 6, "name": "Summit Peaks", "price": 150.00, "img": "img/hd6.jpg" },
+    { "id": 7, "name": "Sunrise Oasis", "price": 180.00, "img": "img/hd7.png" },
+    { "id": 8, "name": "Blue Lagoon", "price": 199.00, "img": "img/hd8.jpg" }
+]

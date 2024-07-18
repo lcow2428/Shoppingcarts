@@ -1,0 +1,142 @@
+/* 
+Student Name: Annsona Ansilon Dores
+Student Id: c0932173
+*/
+body {
+    background-color: #ccb3ff; /* Set background color */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Set default font */
+}
+
+.container {
+    width: 70%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the page */
+}
+
+header {
+    background-color: #9966ff; /* Set background color */
+    margin: 7px 0; /* Set top and bottom margins */
+    border-radius: 5px; /* Add rounded borders */
+    box-shadow: 0 2px 5px rgba(13, 3, 3, 0.2); /* Add shadow */
+    text-align: center; /* Center text */
+    margin: 10px 0;
+    position: relative; /* Add relative positioning */
+}
+#banner-text{
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+#sub-banner{
+    color: white;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+.logo-container {
+    position: absolute;
+    z-index: 2; /* Ensure the logo is on top of the banner */
+    float: left; /* Float the logo to the left */
+    padding: 10px; /* Add padding */
+   
+}
+
+.logo-container a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Set link color */
+    display: flex; /* Use flex for better alignment */
+    align-items: center; /* Center items vertically */
+}
+
+img[alt="Aero Blow Banner"] {
+    width: 100%;
+}
+
+.logo-container img {
+    margin-right: 10px; /* Add space between logo and text */
+} 
+
+nav {
+    text-align: center; /* Center text */
+    padding: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none; /* Remove underlines from links */
+    color: #ffffff; /* Set link color */
+    padding: 5px 10px; /* Set padding for links */
+    margin: 0 5px; /* Set margins between links */
+    border: none; /* Add borders to links */
+    border-radius: 5px; /* Add rounded borders */
+}
+
+nav a:hover {
+    background-color: #e8b7d7; /* Change background color on hover */
+}
+h1{
+    text-align: center;
+    color: rgb(4, 4, 84);
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #580fa7;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}

@@ -1,5 +1,6 @@
 const taxRate = 0.07; // Example tax rate
 let cart = [];
+let products = []; // Array to store the products loaded from data.json
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -14,11 +15,8 @@ function loadCart() {
     }
 }
 
-// Add this function to handle checkout
 function handleCheckout() {
-    // Display a confirmation message
     alert('Order placed successfully');
-    // Optionally, you might want to clear the cart after checkout
     cart = [];
     saveCart();
     updateCartDisplay();
@@ -30,8 +28,8 @@ async function fetchProducts() {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
-        const products = await response.json();
-        return products;
+        products = await response.json(); // Store products in a global variable
+        displayProducts(products); // Display products after fetching
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
@@ -55,17 +53,15 @@ function displayProducts(products) {
 }
 
 function addToCart(productId) {
-    fetchProducts().then(products => {
-        const product = products.find(p => p.id === productId);
-        const cartItem = cart.find(item => item.product.id === productId);
-        if (cartItem) {
-            cartItem.quantity += 1;
-        } else {
-            cart.push({ product, quantity: 1 });
-        }
-        saveCart();
-        updateCartDisplay();
-    });
+    const product = products.find(p => p.id === productId);
+    const cartItem = cart.find(item => item.product.id === productId);
+    if (cartItem) {
+        cartItem.quantity += 1;
+    } else {
+        cart.push({ product, quantity: 1 });
+    }
+    saveCart();
+    updateCartDisplay();
 }
 
 function updateCartDisplay() {
@@ -104,14 +100,9 @@ function deleteCartItem(productId) {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadCart();
-    fetchProducts().then(products => {
-        if (products) {
-            displayProducts(products);
-        }
-    });
+    fetchProducts(); // Fetch products once when the page loads
     updateCartDisplay();
-	
-	// Get the checkout button and add click event listener
+
     const checkoutButton = document.getElementById('checkout-btn');
     if (checkoutButton) {
         checkoutButton.addEventListener('click', handleCheckout);
